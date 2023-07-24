@@ -23,13 +23,13 @@ app.get('/usher.ttvnw.net/*', async (req, res) => {
 
 app.get('/video-weaver.*', async (req, res) => {
   const HLSURL = 'https://' + req.path.slice(1);
-  const proxyURL = `/${btoa(HLSURL)}.m3u8`;
+  const proxyURL = `https://${req.get('host').split(':')[0]}/${btoa(HLSURL)}.m3u8`;
   res.redirect(proxyURL);
 });
 
 app.get('/video-edge-*', async (req, res) => {
   const HLSURL = 'https://' + req.path.slice(1);
-  const proxyURL = `/${btoa(HLSURL)}.ts`;
+  const proxyURL = `https://${req.get('host').split(':')[0]}/${btoa(HLSURL)}.ts`;
   res.redirect(proxyURL);
 });
 
