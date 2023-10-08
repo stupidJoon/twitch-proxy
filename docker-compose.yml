@@ -8,3 +8,4 @@ services:
     volumes:
       - <cert path>:/app/tls/cert.pem
       - <key path>:/app/tls/key.pem
+    command: npm start -- --tls-cert /app/tls/cert.pem --tls-key /app/tls/key.pem
