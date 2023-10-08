@@ -1,15 +1,8 @@
 version: "3"
 
 services:
-  web:
-    build: ./web
-    ports:
-      - 3000:3000
-    volumes:
-      - <cert path>:/app/tls/cert.pem
-      - <key path>:/app/tls/key.pem
   hls-proxy:
-    build: ./hls-proxy
+    build: .
     ports:
       - 443:443
     volumes:
