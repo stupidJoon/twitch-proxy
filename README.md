@@ -4,7 +4,7 @@
 
 ## Require
 - 한국을 제외한 리전의 서버
-- 433, 3000 port
+- 433 port
 - TLS cert, private key(cert.pem, private.pem)
 
 ## How to use
